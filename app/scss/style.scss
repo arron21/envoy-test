@@ -80,6 +80,7 @@ img {
   @include outer-container;
 
   .tile {
+    padding-bottom: 40px;
     @include span-columns(12);
     @include media(480px) {
       @include span-columns(6);
@@ -114,7 +115,6 @@ img {
       line-height: 1;
     }
 
-    // For Demo only
     padding-bottom: 40px;
   }
 
