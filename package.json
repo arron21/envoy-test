@@ -1,0 +1,35 @@
+{
+  "name": "envoy",
+  "version": "1.0.0",
+  "description": "a code test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arron21/envoy-test.git"
+  },
+  "author": "arron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arron21/envoy-test/issues"
+  },
+  "homepage": "https://github.com/arron21/envoy-test#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "del": "^2.2.2",
+    "gulp-cache": "^0.4.5",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^1.2.2"
+  }
+}

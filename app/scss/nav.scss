@@ -1,0 +1,174 @@
+@import "normalize";
+@import "font.scss";
+@import "bourbon";
+@import "neat";
+@import "colors";
+@import "typography";
+
+.mobile-nav {
+  @include position(fixed, 0 null null 0);
+  @include size(100vw 100vh);
+
+  z-index: 100;
+  background: black;
+  display: none;
+  &.mobile-on {
+    display: block;
+  }
+
+
+  ul {
+    li {
+      list-style: none;
+      font-size: 40px;
+
+      a {
+        color: #fff;
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+  }
+
+  .close {
+    @include position(absolute, 10px 35px null null);
+
+    color: #fff;
+    font-size: 10vh;
+    cursor: pointer;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+nav {
+  @include position(fixed, 0 null null 0);
+
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  width: 100vw;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+
+  section {
+    @include outer-container;
+    padding: 0 15px;
+  }
+
+  color: #fff;
+
+  .mobile-nav-btn {
+    display: block;
+    float: right;
+    font-size: 53px;
+    margin: 0 15px;
+    cursor: pointer;
+    @include media(777px) {
+      display: none;
+    }
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    float: left;
+
+    display: none;
+    @include media(777px) {
+      display: block;
+    }
+  }
+
+  .nav-menu {
+    font-size: 13px;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    .nav-link {
+      background: transparent;
+      display: inline;
+      line-height: 60px;
+      text-decoration: none;
+      width: auto;
+      margin-right: 25px;
+      font-weight: bold;
+      font-family: arial;
+
+      a {
+        //padding-right: 1em;
+        color: #fff;
+        &:hover {
+          color: $muted-color;
+        }
+        &:active {
+          color: $link-color;
+        }
+      }
+    }
+  }
+}
+
+
+.logo-container {
+  height: 30px;
+  padding: 15px 0;
+  float: left;
+  margin-right: 30px;
+}
+
+.envoy-logo {
+  height: 30px;
+  fill: #9f9f9f;
+}
+
+
+// tweet btn
+.tweet-btn {
+
+  @include media(max-width 777px) {
+    display: none;
+  }
+
+  position: relative;
+  float: right;
+  background: #464646;
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 40px;
+
+  font-size: 13px;
+
+
+  color: $accent-color;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px 0 60px;
+
+  .twitter-svg {
+    //height: 40px;
+    //width: 30px;
+    //position: absolute;
+    //left: 25px;
+    position: absolute;
+    left: 25px;
+    g {
+      path {
+        fill: $accent-color;
+      }
+    }
+  }
+
+
+
+  &:after {
+    @include position(absolute, 0 null null 100%);
+    @include size(40px);
+
+    background-size: 40px 40px;
+    content: "";
+    background: url(../images/red-plus.png);
+  }
+}
