@@ -74,14 +74,13 @@
   //background: #eee;
   //text-align: center;
   z-index: 6;
-  position: relative;
-
-
   position: absolute;
+  display: block;
   bottom: 30px;
   left: 70%;
+  width: 150px;
 }
-.carouselbox button {
+.carouselbox span {
   border: none;
   display: none;
   background: none;
@@ -91,11 +90,13 @@
   color: #fff;
   margin: 0 10px;
 
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+
   &:hover {
     color: $link-color;
   }
 }
-.active button {
+.active span {
   display: inline-block;
   cursor: pointer;
 }
@@ -129,6 +130,8 @@
       list-style: none;
       opacity: 1;
       cursor: pointer;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+
       &.current {
         color: $link-color;
       }
@@ -150,6 +153,11 @@
 .slide1 {
   @include retina-image('/images/djangoTest', cover);
   background-position: top center;
+  @include media(max-width 480px) {
+    //background-position: center 20px;
+
+  }
+
 
   section {
     position: absolute;
@@ -167,6 +175,26 @@
       font-size: 16px;
       color: $muted-color;
     }
+    @include media(max-width 480px) {
+      top: 10vh;
+      left: 10vw;
+
+      h3 {
+        //font-size: 63px;
+        //line-height: 50px;
+        margin-bottom: 100px;
+      }
+      p {
+        max-width: 90%;
+
+        font-size: 16px;
+        color: #fff;
+        //text-shadow: 2px 1px black;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 8px;
+      }
+    }
   }
 }
 .slide2 {
@@ -178,7 +206,7 @@
     top: 15vh;
     right: 10vw;
 
-    max-width: 610px;
+    max-width: 520px;
 
     h3 {
       color: #d90e0a;
@@ -191,6 +219,19 @@
     @include media(max-width 480px) {
       top: 5vh;
       left: 10vw;
+      h3 {
+        color: #d90e0a;
+        font-size: 50px;
+        line-height: 50px;
+      }
+      p {
+        font-size: 16px;
+        color: #fff;
+        //text-shadow: 2px 1px black;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 8px;
+      }
     }
   }
 }
@@ -218,7 +259,7 @@
 
   section {
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     left: 10vw;
 
     max-width: 680px;
@@ -237,14 +278,22 @@
     }
 
     @include media(max-width 480px) {
-      top: 5vh;
+      top: 10vh;
       left: 10vw;
 
+      h3 {
+        font-size: 46px;
+        line-height: 46px;
+      }
       p {
         max-width: 90%;
 
         font-size: 16px;
-        color: $muted-color;
+        color: #fff;
+        //text-shadow: 2px 1px black;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 8px;
       }
     }
   }
