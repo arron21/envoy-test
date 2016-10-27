@@ -11,7 +11,7 @@ nav = (function(){
         }
         else {
             mobileNav.classList.remove('mobile-on');
-            body.style.overflowY = "hidden";
+            body.style.overflowY = "scroll";
 
         }
     }
