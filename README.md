@@ -7,7 +7,9 @@ This is a single responsive web page
 -
 
 - Pull the repo
-- run gulp watch
+- open bash navigate to directory
+- npm install
+- $ gulp watch
 
 I know the node_modules shouldn't be on github, that will get fixed later.
 
