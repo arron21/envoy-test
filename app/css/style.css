@@ -1778,7 +1778,8 @@ html {
     .mobile-nav ul li {
       list-style: none;
       font-size: 40px;
-      opacity: 0; }
+      opacity: 0;
+      will-change: transform; }
       .mobile-nav ul li a {
         color: #fff; }
         .mobile-nav ul li a:hover {
@@ -1793,15 +1794,16 @@ html {
     cursor: pointer;
     z-index: 110; }
     .mobile-nav .close:hover {
-      color: #f05134;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg); }
+      color: #f05134; }
+      .mobile-nav .close:hover i {
+        -webkit-transition: -webkit-transform 300ms ease-in-out;
+        -moz-transition: -moz-transform 300ms ease-in-out;
+        transition: transform 300ms ease-in-out;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg); }
 
 nav {
   position: fixed;

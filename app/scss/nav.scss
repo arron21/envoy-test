@@ -69,6 +69,7 @@
       list-style: none;
       font-size: 40px;
       opacity: 0;
+      will-change: transform;
       a {
         color: #fff;
         &:hover {
@@ -89,9 +90,11 @@
 
     &:hover {
       color: $link-color;
-      @include transition(all 300ms ease-in-out);
+      i {
+        @include transition(transform 300ms ease-in-out);
+        @include transform(rotate(180deg));
+      }
 
-      @include transform(rotate(180deg));
 
     }
   }
