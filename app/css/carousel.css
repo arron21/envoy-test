@@ -854,9 +854,6 @@ html {
   width: 100%;
   position: relative;
   overflow: hidden; }
-  @media screen and (orientation: portrait) {
-    .carouselbox {
-      max-height: 550px; } }
 
 .content {
   margin: 0;
@@ -887,13 +884,17 @@ html {
   position: absolute;
   top: 0;
   opacity: 0;
-  transition: 1s; }
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
 
 .active li.current {
   top: 0px;
   opacity: 1;
   z-index: 5;
-  transition: 1s; }
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
   .active li.current img {
     height: 100vh;
     max-width: 9999px; }
@@ -950,6 +951,11 @@ html {
 
 .slides h3 {
   margin-bottom: .5em; }
+
+.slide {
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: 50% 50% !important; }
 
 .slide1 {
   background-image: url("/images/djangoTest.png");

@@ -11,9 +11,12 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  @include media(orientation portrait) {
-    max-height: 550px;
-  }
+
+  //max-height: 550px;
+
+  //@include media(orientation portrait) {
+  //  max-height: 550px;
+  //}
 
 }
 .content {
@@ -45,6 +48,7 @@
 
 .active {
   height: 100vh;
+  //height: calc(100vh - 200px);
 }
 .active li {
   position: absolute;
@@ -52,7 +56,7 @@
   top: 0;
   opacity: 0;
 
-  transition: 1s;
+  @include transition(all 1.0s ease-in-out);
 
 }
 .active li.current {
@@ -60,7 +64,8 @@
   opacity: 1;
   z-index: 5;
 
-  transition: 1s;
+  @include transition(all 1.0s ease-in-out);
+
 
 
   img {
@@ -149,6 +154,12 @@
   h3 {
     margin-bottom: .5em;
   }
+}
+.slide {
+  background-repeat: no-repeat;
+
+  background-size: cover !important;
+  background-position: 50% 50% !important;
 }
 .slide1 {
   @include retina-image('/images/djangoTest', cover);

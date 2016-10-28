@@ -1,1 +1,14 @@
 # Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/workspace.xml
+app/fonts/
+node_modules/console-control-strings/README.md~
+node_modules/gauge/CHANGELOG.md~
+node_modules/gauge/README.md~
+node_modules/in-publish/README.md~
+node_modules/normalize-package-data/test/normalize.js~
+console-control-strings/README.md~
+gauge/CHANGELOG.md~
+gauge/README.md~
+in-publish/README.md~
+normalize-package-data/test/normalize.js~
